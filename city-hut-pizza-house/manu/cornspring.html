@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corn Spring - Pizza House</title>
+    <link rel="icon" href="/logo-img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../app.css/header-footer.css">
+    <link rel="preload" href="../app.css/index.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/index.css">
+    </noscript>
+    <link rel="preload" href="../app.css/contect.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/contect.css">
+    </noscript>
+    <link rel="preload" href="../app.css/menu.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/menu.css">
+    </noscript>
+</head>
+
+<body>
+    <!--* ------------------- this page heading  -->
+    <header>
+        <section class="header-section">
+
+           <div class="logo-img">
+                <a href="#"><img loading="lazy" src="../logo-img/new-logo-1.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House"></a>
+            </div>
+            <nav class="nav-baar desktop-nav">
+                <li><a href="../index.html" class="active">home</a></li>
+                <li><a href="../menu.html">menu</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../outlate.html">outlet</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </nav>
+            <nav class="nav-baar mobile-menu">
+                <div class="logo-img">
+                    <img loading="lazy" src="../logo-img/logo.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House">
+                    <div class="close-btn">X</div>
+                </div>
+                <li><a href="../index.html" class="active">home</a></li>
+                <li><a href="../menu.html">menu</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../outlate.html">outlet</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </nav>
+            <div class="menu-bar"><img loading="lazy" src="../logo-img/Three horizontally a.png" id="three-line" alt="">
+            </div>
+        </section>
+    </header>
+    <main>
+
+
+
+        <!-- CORN SPRING MENU PAGE -->
+        <section class="menu-section" id="menuPage">
+            <h1 class="menu-grid-title">Corn Spring Rolls</h1>
+            <div class="grid" id="cardsContainer">
+                <!-- Cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- DETAIL PAGE -->
+        <section id="detailPage" style="display:none;">
+            <div class="row" style="justify-content:space-between;">
+                <div class="row">
+                    <button class="backBtn" onclick="goBack()">← Back</button>
+                    <div style="color:#999;font-size:14px" id="crumb">Corn Spring / </div>
+                </div>
+            </div>
+
+            <div class="detail-wrap">
+                <div class="detail-main">
+                    <div class="slider" id="sliderRoot">
+                        <div class="slides" id="slides">
+                            <!-- slides injected -->
+                        </div>
+                        <div class="controls">
+                            <button class="btn" id="prevBtn">‹</button>
+                            <button class="btn" id="nextBtn">›</button>
+                        </div>
+                    </div>
+                    <div class="dots" id="dotsWrap"></div>
+
+                    <h2 id="detailTitle"
+                        style="margin-top:20px;margin-bottom:8px;color:#333;font-size:28px;font-weight:700"></h2>
+                </div>
+
+                <aside class="detail-side">
+                    <h3 style="margin-top:0;color:#333" id="sideTitle"></h3>
+                    <div class="price" id="sidePrice"></div>
+                    <p id="sideText" style="color:#666;margin-top:12px"></p>
+                </aside>
+                <div id="btn-contact-footer"> <a href="/contact.html">Contact</a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+
+
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Reach Us</h3>
+                <div class="footer-info">
+                    <p><strong>Address:</strong> Lohara road, near Saraswati shisu mandir, Ramnagar, Kawardha,
+                        Chhattisgarh 491995 </p>
+                    <p><strong>Phone:</strong> +91 8817287066</p>
+                    <p><strong>Email:</strong> info@cityhutpizza.com</p>
+                    <p><strong>View </strong><a href="/contact.html" style="color: var(--accentColor);">more..</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/menu.html">Menu</a></li>
+                    <li><a href="/outlate.html">outlet</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Developed By:</h3>
+                <div class="footer-info">
+                    <p> Ayush Pandey</p>
+                    <p> Web Development, UI/UX Design, JavaScript</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/cityhut_pizza?igsh=YTdqa25qemQ4OGtu" target="_blank"><img
+                                loading="lazy" src="/logo-img/insta.webp" alt="" class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/x.webp" alt=""
+                                class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/linkedin.webp" alt=""
+                                class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/OIP.png" alt=""
+                                class="contact-img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 City-Hut Pizza House. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+
+    <script src="../menuToggle.js"></script>
+    <script>
+        /*
+            CornSpring page script
+            - Data source: `const cornSpringData` defined below.
+            - Renders cards into `#cardsContainer`.
+            - Detail behavior: `openCard` -> `populateDetail` populates `#sideTitle`, `#sidePrice`, `#sideText`.
+        */
+        const cornSpringData = {
+            1: { title: "Veg Spring Roll", desc: "Crispy pastry rolls filled with seasoned julienned vegetables.", images: ["../menu-img/corn-spring/veg-spring.jpg", "../menu-img/corn-spring/veg-spring2.jpg"], price: "₹130", link: "" },
+            2: { title: "Paneer Spring Roll", desc: "An upgraded spring roll featuring soft paneer filling.", images: ["../menu-img/corn-spring/paneer-spring.jpg", "../menu-img/corn-spring/paneer-spring2.jpg"], price: "₹180", link: "" },
+            3: { title: "Masala Sweet Corn", desc: "Steamed sweet corn tossed in a zesty spice blend.", images: ["../menu-img/corn-spring/masala-corn.jpg", "../menu-img/corn-spring/masala-corn2.jpg"], price: "₹50", link: "" },
+            4: { title: "Peri Peri Corn", desc: "Sweet corn with a spicy and tangy African bird's eye chili kick.", images: ["../menu-img/corn-spring/pery-corn.jpg", "../menu-img/corn-spring/pery-corn2.jpg"], price: "₹50", link: "" },
+            5: { title: "Fresh Sweet Corn", desc: "The classic, simple, and buttery taste of steamed corn.", images: ["../menu-img/corn-spring/sweet-corn.jpg", "../menu-img/corn-spring/sweet-corn2.jpg"], price: "₹40", link: "" },
+            6: { title: "Mixed Vegetable & Corn", desc: "A healthy and savory combination of mixed vegetables and corn.", images: ["../menu-img/corn-spring/veg-mix.jpg", "../menu-img/corn-spring/veg-mix2.jpg"], price: "₹60", link: "" }
+        };
+
+        const itemdata = cornSpringData;
+        const cardsContainer = document.getElementById('cardsContainer');
+
+        function renderCards() {
+            cardsContainer.innerHTML = '';
+            Object.keys(cornSpringData).forEach(key => {
+                const item = cornSpringData[key];
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.cursor = 'pointer';
+                card.onclick = () => openCard(key);
+
+                const thumbHTML = item.images ? ("<img loading=\"lazy\" src=\"" + item.images[0] + "\" alt=\"" + item.title + "\">") : ("<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:#f5f5f5;color:#666;font-size:14px;font-weight:600;\">" + (item.text ? item.text[0] : '') + "</div>");
+                card.innerHTML = "<div class=\"thumb\">" + thumbHTML + "</div><h3>" + item.title + "</h3><p>" + item.desc + "</p><div class=\"price\">" + item.price + "</div>";
+
+                cardsContainer.appendChild(card);
+            })
+        }
+        renderCards();
+
+        let currentId = null, currentIndex = 0, slideTimer = null;
+        const slidesEl = document.getElementById('slides'), dotsWrap = document.getElementById('dotsWrap'), prevBtn = document.getElementById('prevBtn'), nextBtn = document.getElementById('nextBtn');
+
+        function openCard(id) {
+            document.getElementById("menuPage").style.display = "none";
+            document.getElementById("detailPage").style.display = "block";
+            currentId = id;
+            currentIndex = 0;
+            populateDetail(id);
+            startAutoPlay();
+        }
+
+        function populateDetail(id) {
+            const item = cornSpringData[id];
+            if (!item) return;
+            document.getElementById('crumb').innerText = 'Corn Spring / ' + item.title;
+            document.getElementById('detailTitle').innerText = item.title;
+            document.getElementById('sidePrice').innerText = item.price || '';
+            document.getElementById('sideTitle').innerText = item.title;
+            document.getElementById('sideText').innerText = item.desc;
+            slidesEl.innerHTML = '';
+            dotsWrap.innerHTML = '';
+            const slideSource = item.images || item.text;
+            slideSource.forEach((src, i) => {
+                const s = document.createElement('div');
+                s.className = 'slide';
+                if (item.images) {
+                    s.innerHTML = "<img loading=\"lazy\" src=\"" + src + "\" alt=\"" + item.title + " image " + (i + 1) + "\">";
+                } else {
+                    s.innerHTML = "<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:320px;background:#f5f5f5;color:#666;font-size:18px;font-weight:600;\">" + src + "</div>";
+                }
+                slidesEl.appendChild(s);
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsWrap.appendChild(dot)
+            });
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            slidesEl.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
+            Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === currentIndex))
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slidesEl.children.length) % slidesEl.children.length;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slidesEl.children.length;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function goToSlide(i) {
+            currentIndex = i;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function startAutoPlay() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(() => nextSlide(), 3500)
+        }
+
+        function resetAutoPlay() {
+            clearInterval(slideTimer);
+            slideTimer = setTimeout(() => startAutoPlay(), 2800)
+        }
+
+        function stopAutoPlay() {
+            clearInterval(slideTimer)
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        let startX = 0, isDown = false;
+        const sliderRoot = document.getElementById('sliderRoot');
+        sliderRoot.addEventListener('pointerdown', e => {
+            isDown = true;
+            startX = e.clientX || (e.touches && e.touches[0].clientX);
+            stopAutoPlay()
+        });
+        window.addEventListener('pointerup', e => {
+            if (!isDown) return;
+            isDown = false;
+            const dx = (e.clientX || 0) - startX;
+            if (dx > 40) prevSlide();
+            else if (dx < -40) nextSlide();
+            startAutoPlay()
+        });
+
+        function goBack() {
+            document.getElementById("detailPage").style.display = "none";
+            document.getElementById("menuPage").style.display = "block";
+            stopAutoPlay();
+        } function addToCart() {
+            alert((cornSpringData[currentId]?.title || 'Item') + " added to your order!")
+        }
+
+        window.addEventListener('resize', () => updateSlidePosition());
+    </script>
+</body>
+
+</html>

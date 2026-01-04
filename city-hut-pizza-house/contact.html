@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <link rel="icon" href="/logo-img/logo.png" type="image/png">
+  <link rel="stylesheet" href="app.css/header-footer.css">
+  <link rel="preload" href="app.css/index.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="app.css/index.css">
+  </noscript>
+
+  <link rel="preload" href="app.css/contect.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="app.css/contect.css">
+  </noscript>
+
+
+
+
+  <style>
+    /* CLEAN CONTACT PAGE UI */
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--light-gray);
+      margin: 0;
+      padding: 0;
+    }
+
+    /*~ CONTACT CARDS */
+    .cards {
+      padding: 2rem 1rem;
+      min-height: 550px;
+    }
+
+    .contact-wrapper {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 1rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-title {
+      font-size: 2rem;
+      margin-bottom: .4rem;
+      color: var(--mainColor);
+    }
+
+    .contact-subtitle {
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+
+    /* INFO LIST */
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: .8rem 1rem;
+      background: #f9f9f9;
+      border-radius: 10px;
+      border-left: 5px solid var(--mainColor);
+    }
+
+    .info-row i {
+      font-size: 1.4rem;
+      color: var(--mainColor);
+    }
+
+    .info-row span {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* SOCIAL */
+    .social-section {
+      margin-top: 2rem;
+    }
+
+    .social-section h3 {
+      margin-bottom: 1rem;
+      color: var(--secondaryColor);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .social-icons a {
+      display: flex;
+      width: 45px;
+      height: 45px;
+      justify-content: center;
+      align-items: center;
+      background: var(--mainColor);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-4px);
+      background: var(--secondaryColor);
+    }
+
+    /* MAP CARD */
+    .map-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      padding: 1rem;
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .direction-btn {
+      display: block;
+      margin-top: 1.5rem;
+      border: 1px solid var(--mainColor);
+      color: var(--whiteText);
+      background-color: var(--mainColor);
+      text-align: center;
+      padding: 0.9rem 1rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+      transition: 0.3s ease-in-out;
+    }
+
+    .direction-btn:hover {
+      background: var(--whiteText);
+      color: var(--mainColor);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+      font-size: 1.2rem;
+      padding: 0.8rem 0.9rem;
+    }
+
+    .quick-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: 1rem 0 1.2rem 0;
+    }
+
+    .quick-info span {
+      background: #f4f4f4;
+      padding: .4rem .8rem;
+      border-radius: 20px;
+      font-size: .9rem;
+      color: #333;
+    }
+
+
+    /* RESPONSIVE */
+    @media (min-width: 900px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!--* ------------------- this page heading  -->
+  <header>
+    <section class="header-section">
+<div class="logo-img">
+                <a href="#"><img loading="lazy" src="/logo-img/new-logo-1.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House"></a>
+            </div>
+      <nav class="nav-baar desktop-nav">
+        <li><a href="index.html" class="active">home</a></li>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="outlate.html">Outlet</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </nav>
+
+
+
+
+
+
+      <nav class="nav-baar mobile-menu">
+
+        <div class="logo-img">
+          <a href="#"><img loading="lazy" src="/logo-img/logo.png" alt="City Hut Pizza House"
+              title="City Hut Pizza House"></a>
+          <div class="close-btn">X</div>
+        </div>
+
+
+        <li><a href="index.html" class="active">home</a></li>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="outlate.html">outlet</a></li>
+        <li><a href="contact.html">contact</a></li>
+
+      </nav>
+      <div class="menu-bar"><img loading="lazy" src="./logo-img/Three horizontally a.png" id="three-line" alt=""></div>
+    </section>
+  </header>
+
+  <main>
+
+    <section id="contact" class="contact-section">
+      <a href="#" class="btn-primary">Contact</a>
+    </section>
+
+    <div class="contact-wrapper">
+
+      <section class="contact-card cards">
+
+        <h1 class="contact-title">Contact Us</h1>
+        <p class="contact-subtitle">We’re here to serve you and answer your queries.</p>
+
+        <div class="info-list">
+          <div class="info-row">
+            <i class="bi bi-telephone-fill"></i>
+            <span><strong>Phone:</strong> +91 8817287066</span>
+          </div>
+
+          <div class="info-row">
+            <i class="bi bi-envelope-fill"></i>
+            <span><strong>Email:</strong> city-hut-pizza-house-143@gmail.com</span>
+          </div>
+
+          <div class="info-row">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span><strong>Address:</strong> Lohara road, near Saraswati shisu mandir, Ramnagar, Kawardha, Chhattisgarh
+              491995</span>
+          </div>
+
+          <div class="info-row">
+            <i class="bi bi-clock-fill"></i>
+            <span><strong>Working Hours:</strong> Mon–Sun, 11:00 AM - 10:00 PM</span>
+          </div>
+        </div>
+
+        <div class="social-section">
+          <h3>Follow us</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/cityhut_pizza?igsh=YTdqa25qemQ4OGtu" target="_blank"><img loading="lazy"
+                src="/logo-img//insta.webp" alt="" class="contact-img"></a>
+            <a href="" target="_blank"><img loading="lazy" src="/logo-img/fb.webp" alt="" class="contact-img"></a>
+            <a href="" target="_blank"><img loading="lazy" src="/logo-img/email.webp" alt="" class="contact-img"></a>
+            <a href="" target="_blank"><img loading="lazy" src="/logo-img/x.webp" alt="" class="contact-img"></a>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="map-card cards">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1849.7334689502463!2d81.2219066!3d21.9934128!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a29bf7ef851cccd%3A0xd0c82395b2b9219d!2sCityhut%20Pizza!5e0!3m2!1sen!2sin!4v1766953478639!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="quick-info">
+          <span>🅿 Parking Available</span>
+          <span>💳 UPI Accepted</span>
+
+        </div>
+
+        <!-- GET DIRECTION BUTTON -->
+        <a class="direction-btn" href="https://maps.app.goo.gl/doXFLWHhz3z89yaU6" target="_blank">
+          Get Directions <i class="bi bi-arrow-right"></i>
+        </a>
+      </section>
+
+
+    </div>
+
+    </section>
+
+    <section id="reviews" class="review-section">
+      <a href="#" class="btn-primary btn-review">Review</a>
+
+      <div class="review-slider">
+
+
+
+        <div class="slider-item active">
+
+          <img loading="lazy" src="reviwe-img/reviwe1.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+        <div class="slider-item active">
+          <img loading="lazy" src="reviwe-img/reviwe2.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+
+        <div class="slider-item active">
+          <img loading="lazy" src="reviwe-img/reviwe3.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+        <div class="slider-item active">
+          <img loading="lazy" src="reviwe-img/reviwe4.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe5.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe6.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe7.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe8.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe9.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe11.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe12.jpeg" alt="" class="img-placeholder">
+
+        </div>
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe13.jpeg" alt="" class="img-placeholder">
+
+
+        </div>
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe14.jpeg" alt="" class="img-placeholder">
+
+        </div>
+        <div class="slider-item">
+          <img loading="lazy" src="reviwe-img/reviwe15.jpeg" alt="" class="img-placeholder">
+
+        </div>
+
+
+        <button class="slide-nav prev"><i class="fas fa-arrow-left"></i></button>
+        <button class="slide-nav next"><i class="fas fa-arrow-right"></i></button>
+      </div>
+
+      <h2 class="thank-you-message">Thank you</h2>
+      <h2 class="thank-you-message"> Please visit us</h2>
+    </section>
+
+    </div>
+  </main>
+
+  <!-- this is  footer -->
+  <footer class="main-footer">
+
+
+
+
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Reach Us</h3>
+        <div class="footer-info">
+          <p><strong>Address:</strong> Lohara road, near Saraswati shisu mandir, Ramnagar, Kawardha, Chhattisgarh 491995
+          </p>
+          <p><strong>Phone:</strong> +91 8817287066</p>
+          <p><strong>Email:</strong> info@cityhutpizza.com</p>
+          <p><strong>View </strong><a href="contact.html" style="color: var(--accentColor);">more..</a></p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="outlate.html">Outlets</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Developed By:</h3>
+        <div class="footer-info">
+          <p> Ayush Pandey</p>
+          <p> Web Development, UI/UX Design, JavaScript</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/cityhut_pizza?igsh=YTdqa25qemQ4OGtu" target="_blank"><img loading="lazy"
+                src="/logo-img//insta.webp" alt="" class="contact-img"></a>
+            <a href="" target="_blank"><img loading="lazy" src="/logo-img/x.webp" alt="" class="contact-img"></a>
+            <a href="" target="_blank"><img loading="lazy" src="/logo-img/linkedin.webp" alt="" class="contact-img"></a>
+            <a href="" target="_blank"><img loading="lazy" src="/logo-img/OIP.png" alt="" class="contact-img"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 City-Hut Pizza House. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="menuToggle.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

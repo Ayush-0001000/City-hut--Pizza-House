@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocktails - Pizza House</title>
+    <link rel="icon" href="/logo-img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../app.css/header-footer.css">
+    <link rel="stylesheet" href="../app.css/index.css">
+    <link rel="stylesheet" href="../app.css/contect.css">
+    <link rel="stylesheet" href="../app.css/menu.css">
+
+</head>
+
+<body>
+    <header>
+        <section class="header-section">
+           <div class="logo-img">
+                <a href="#"><img loading="lazy" src="../logo-img/new-logo-1.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House"></a>
+            </div>
+            <nav class="nav-baar desktop-nav">
+                <li><a href="../index.html" class="active">home</a></li>
+                <li><a href="../menu.html">menu</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../outlate.html">outlet</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </nav>
+            <nav class="nav-baar mobile-menu">
+                <div class="logo-img">
+                    <img loading="lazy" src="../logo-img/logo.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House">
+                    <div class="close-btn">X</div>
+                </div>
+                <li><a href="../index.html" class="active">home</a></li>
+                <li><a href="../menu.html">menu</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../outlate.html">outlet</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </nav>
+            <div class="menu-bar"><img loading="lazy" src="../logo-img/Three horizontally a.png" id="three-line" alt="">
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+
+
+        <section class="menu-section" id="menuPage">
+            <h1 class="menu-grid-title">Mocktails</h1>
+            <div class="grid" id="cardsContainer">
+            </div>
+        </section>
+
+        <section id="detailPage" style="display:none;">
+            <div class="row" style="justify-content:space-between;">
+                <div class="row">
+                    <button class="backBtn" onclick="goBack()">← Back</button>
+                    <div style="color:#999;font-size:14px" id="crumb">Mocktail / </div>
+                </div>
+            </div>
+
+            <div class="detail-wrap">
+                <div class="detail-main">
+                    <div class="slider" id="sliderRoot">
+                        <div class="slides" id="slides"></div>
+                        <div class="controls">
+                            <button class="btn" id="prevBtn">‹</button>
+                            <button class="btn" id="nextBtn">›</button>
+                        </div>
+                    </div>
+                    <div class="dots" id="dotsWrap"></div>
+
+                    <h2 id="detailTitle"
+                        style="margin-top:20px;margin-bottom:8px;color:#333;font-size:28px;font-weight:700"></h2>
+                    <p class="desc" id="detailDesc"></p>
+                </div>
+
+                <aside class="detail-side">
+                    <h3 style="margin-top:0;color:#333" id="sideTitle"></h3>
+                    <p id="sideText" style="color:#666;margin-top:12px"></p>
+
+                    <div style="margin-top:20px">
+                        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px;">
+                            <label style="font-weight:600;color:#333;font-size:14px;">Select Type</label>
+                            <select id="mocktailType" onchange="updateMocktailPrice()"
+                                style="padding:10px;border-radius:6px;border:1px solid #ddd;">
+                                <option value="normal">Normal</option>
+                                <option value="special">Special</option>
+                            </select>
+                        </div>
+
+                        <div id="mocktailPrice"
+                            style="font-weight:700;color:#ff0b0b;margin-bottom:12px;font-size:24px;"></div>
+
+
+                    </div>
+                </aside>
+                <div id="btn-contact-footer"> <a href="/contact.html">Contact</a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+
+
+
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Reach Us</h3>
+                <div class="footer-info">
+                    <p><strong>Address:</strong> Lohara road, near Saraswati shisu mandir, Ramnagar, Kawardha,
+                        Chhattisgarh 491995 </p>
+                    <p><strong>Phone:</strong> +91 8817287066</p>
+                    <p><strong>Email:</strong> info@cityhutpizza.com</p>
+                    <p><strong>View </strong><a href="/contact.html" style="color: var(--accentColor);">more..</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/menu.html">Menu</a></li>
+                    <li><a href="/outlate.html">outlet</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Developed By:</h3>
+                <div class="footer-info">
+                    <p> Ayush Pandey</p>
+                    <p> Web Development, UI/UX Design, JavaScript</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/cityhut_pizza?igsh=YTdqa25qemQ4OGtu" target="_blank"><img
+                                loading="lazy" src="/logo-img/insta.webp" alt="" class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/x.webp" alt=""
+                                class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/linkedin.webp" alt=""
+                                class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/OIP.png" alt=""
+                                class="contact-img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 City-Hut Pizza House. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+
+    <script src="../mocktail.js"></script>
+
+
+    <script>
+        // Use data from mocktail.js
+        const mockData = window.mocktailCardsData;
+        const cardsContainer = document.getElementById('cardsContainer');
+        let currentId = null, currentIndex = 0, slideTimer = null;
+        const slidesEl = document.getElementById('slides'), dotsWrap = document.getElementById('dotsWrap');
+
+        // 1. Render Cards
+        function renderCards() {
+            if (!cardsContainer) return;
+            cardsContainer.innerHTML = '';
+            Object.keys(mockData).forEach(key => {
+                const item = mockData[key];
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.cursor = 'pointer';
+
+                const thumbHTML = item.images ? ("<img loading=\"lazy\" src=\"" + item.images[0] + "\" alt=\"" + item.title + "\">") : "<div>Mocktail</div>";
+
+                card.innerHTML = "<div class=\"thumb\">" + thumbHTML + "</div><h3>" + item.title + "</h3>";
+                card.onclick = () => openCard(key);
+                cardsContainer.appendChild(card);
+            })
+        }
+
+        // 2. Open Detail View
+        function openCard(id) {
+            document.getElementById("menuPage").style.display = "none";
+            document.getElementById("detailPage").style.display = "block";
+            currentId = id;
+            currentIndex = 0;
+            populateDetail(id);
+            startAutoPlay();
+        }
+
+        // 3. Populate Data & Slider
+        function populateDetail(id) {
+            const item = mockData[id];
+            if (!item) return;
+
+            // Text Details
+            document.getElementById('crumb').innerText = 'Mocktail / ' + item.title;
+            document.getElementById('detailTitle').innerText = item.title;
+            document.getElementById('detailDesc').innerText = item.desc;
+            document.getElementById('sideTitle').innerText = item.title;
+            document.getElementById('sideText').innerText = item.desc;
+
+            // Reset selection to Normal
+            document.getElementById("mocktailType").value = "normal";
+
+            // Price Update
+            updateMocktailPrice();
+
+            // Slider Logic
+            slidesEl.innerHTML = '';
+            dotsWrap.innerHTML = '';
+            item.images.forEach((src, i) => {
+                const s = document.createElement('div');
+                s.className = 'slide';
+                s.innerHTML = "<img loading=\"lazy\" src=\"" + src + "\" alt=\"Image\">";
+                slidesEl.appendChild(s);
+
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsWrap.appendChild(dot);
+            });
+            updateSlidePosition();
+        }
+
+        // 4. Update Price Logic (Normal vs Special)
+        function updateMocktailPrice() {
+            const typeEl = document.getElementById("mocktailType");
+            const priceEl = document.getElementById("mocktailPrice");
+
+            const variant = typeEl.value; // 'normal' or 'special'
+            const item = mockData[currentId];
+
+            if (!item) return;
+
+            // Get price from mocktailMenu -> section -> variant
+            const sectionKey = 'section' + item.section;
+            const menuData = window.mocktailMenu[sectionKey];
+
+            if (menuData && menuData[variant]) {
+                priceEl.innerText = '₹' + menuData[variant];
+            } else {
+                priceEl.innerText = 'N/A';
+            }
+        }
+
+        function addToCart() {
+            const item = mockData[currentId];
+            const variant = document.getElementById("mocktailType").value;
+            const price = document.getElementById("mocktailPrice").innerText;
+            alert("Added to cart:\n" + item.title + "\nType: " + variant + "\nPrice: " + price);
+            goBack();
+        }
+
+        // --- Slider Functions (Same as before) ---
+        function updateSlidePosition() {
+            slidesEl.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
+            Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        }
+        function nextSlide() { currentIndex = (currentIndex + 1) % slidesEl.children.length; updateSlidePosition(); }
+        function prevSlide() { currentIndex = (currentIndex - 1 + slidesEl.children.length) % slidesEl.children.length; updateSlidePosition(); }
+        function goToSlide(i) { currentIndex = i; updateSlidePosition(); }
+
+        function startAutoPlay() { clearInterval(slideTimer); slideTimer = setInterval(() => nextSlide(), 3500); }
+        function stopAutoPlay() { clearInterval(slideTimer); }
+
+        document.getElementById('prevBtn').addEventListener('click', () => { prevSlide(); stopAutoPlay(); });
+        document.getElementById('nextBtn').addEventListener('click', () => { nextSlide(); stopAutoPlay(); });
+
+        function goBack() {
+            document.getElementById("detailPage").style.display = "none";
+            document.getElementById("menuPage").style.display = "block";
+            stopAutoPlay();
+        }
+
+        // Initialize
+        renderCards();
+    </script>
+</body>
+
+</html>

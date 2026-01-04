@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Pizza House</title>
+    <link rel="icon" href="/logo-img/logo.png" type="image/png">
+    <link rel="stylesheet" href="app.css/header-footer.css">
+    <link rel="preload" href="app.css/index.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="app.css/index.css">
+    </noscript>
+
+    <link rel="preload" href="app.css/menu.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="app.css/menu.css">
+    </noscript>
+    <link rel="preload" href="app.css/contect.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="app.css/contect.css">
+    </noscript>
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <!--* ------------------- this page heading  -->
+    <header>
+        <section class="header-section">
+
+          <div class="logo-img">
+                <a href="#"><img loading="lazy" src="/logo-img/new-logo-1.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House"></a>
+            </div>
+            <nav class="nav-baar desktop-nav">
+                <li><a href="index.html" class="active">home</a></li>
+                <li><a href="menu.html">menu</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="outlate.html">outlet</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </nav>
+            <nav class="nav-baar mobile-menu">
+                <div class="logo-img">
+                    <img loading="lazy" src="/logo-img/logo.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House">
+                    <div class="close-btn">X</div>
+                </div>
+                <li><a href="index.html" class="active">home</a></li>
+                <li><a href="menu.html">menu</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="outlate.html">outlet</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </nav>
+            <div class="menu-bar"><img loading="lazy" src="./logo-img/Three horizontally a.png" id="three-line" alt="">
+            </div>
+        </section>
+    </header>
+    <main>
+
+
+        <section class="hero-section">
+
+        </section>
+
+
+        <section class="menu-section" id="menuPage">
+            <div class="menu-grid-titlei-div">
+                <h1 class="menu-grid-title" id="cernter-h1">Our Menu</h1>
+            </div>
+            <div class="grid" id="cardsContainer">
+                <!-- Cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- DETAIL PAGE -->
+        <section id="detailPage" style="display:none;">
+            <div class="row" style="justify-content:space-between;">
+                <div class="row">
+                    <button class="backBtn" onclick="goBack()">← Back to Menu</button>
+                    <div style="color:#999;font-size:14px" id="crumb">Menu / </div>
+                </div>
+            </div>
+
+            <div class="detail-wrap">
+                <div class="detail-main">
+                    <div class="slider" id="sliderRoot">
+                        <div class="slides" id="slides">
+                            <!-- slides injected -->
+                        </div>
+                        <div class="controls">
+                            <button class="btn" id="prevBtn">‹</button>
+                            <button class="btn" id="nextBtn">›</button>
+                        </div>
+                    </div>
+                    <div class="dots" id="dotsWrap"></div>
+
+                    <h2 id="detailTitle"
+                        style="margin-top:20px;margin-bottom:8px;color:#333;font-size:28px;font-weight:700"></h2>
+
+                    <p class="desc" id="detailDesc"></p>
+                </div>
+
+                <aside class="detail-side">
+                    <h3 style="margin-top:0;color:#252525" id="sideTitle"></h3>
+                    <p id="sideText" style="color:#404040;margin-top:12px"></p>
+                    <div style="margin-top:20px">
+                        <!-- Inline pizza option controls (shown only for pizza items) -->
+                        <div id="detailPizzaControls" style="display:none;">
+                            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px;">
+                                <label style="font-weight:600;color:#333;font-size:14px;">Type</label>
+                                <select id="detailPizzaType" onchange="updatePizzaPrice('detail')"
+                                    style="padding:10px;border-radius:6px;border:1px solid #ddd;">
+                                    <option value="pan">Pan</option>
+                                    <option value="cheese">Cheese</option>
+                                </select>
+                            </div>
+                            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px;">
+                                <label style="font-weight:600;color:#333;font-size:14px;">Size</label>
+                                <select id="detailPizzaSize" onchange="updatePizzaPrice('detail')"
+                                    style="padding:10px;border-radius:6px;border:1px solid #ddd;">
+                                    <option value="regular">Regular</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                </select>
+                            </div>
+                            <div id="detailPizzaPrice"
+                                style="font-weight:700;color:#ff6b35;margin-bottom:12px;font-size:18px;"></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- (Pizza options are now shown inside the detail aside for pizza items) -->
+    </main>
+
+    <footer class="main-footer">
+
+
+
+        <section id="reviews" class="review-section">
+            <a href="#" class="btn-primary btn-review">Reviews</a>
+
+            <div class="review-slider">
+                <div class="slider-item active">
+
+                    <img loading="lazy" src="reviwe-img/reviwe1.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+                <div class="slider-item active">
+                    <img loading="lazy" src="reviwe-img/reviwe2.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+
+                <div class="slider-item active">
+                    <img loading="lazy" src="reviwe-img/reviwe3.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+                <div class="slider-item active">
+                    <img loading="lazy" src="reviwe-img/reviwe4.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe5.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe6.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe7.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe8.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe9.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe11.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe12.jpeg" alt="" class="img-placeholder">
+
+                </div>
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe13.jpeg" alt="" class="img-placeholder">
+
+
+                </div>
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe14.jpeg" alt="" class="img-placeholder">
+
+                </div>
+                <div class="slider-item">
+                    <img loading="lazy" src="reviwe-img/reviwe15.jpeg" alt="" class="img-placeholder">
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Reach Us</h3>
+                    <div class="footer-info">
+                        <p><strong>Address:</strong> Lohara road, near Saraswati shisu mandir, Ramnagar, Kawardha,
+                            Chhattisgarh 491995 </p>
+                        <p><strong>Phone:</strong> +91 8817287066</p>
+                        <p><strong>Email:</strong> info@cityhutpizza.com</p>
+                        <p><strong>View </strong><a href="contact.html" style="color: var(--accentColor);">more..</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="outlate.html">outlet</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Developed By:</h3>
+                    <div class="footer-info">
+                        <p> Ayush Pandey</p>
+                        <p> Web Development, UI/UX Design, JavaScript</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/cityhut_pizza?igsh=YTdqa25qemQ4OGtu" target="_blank"><img
+                                    loading="lazy" src="/logo-img//insta.webp" alt="" class="contact-img"></a>
+                            <a href="" target="_blank"><img loading="lazy" src="/logo-img/x.webp" alt=""
+                                    class="contact-img"></a>
+                            <a href="" target="_blank"><img loading="lazy" src="/logo-img/linkedin.webp" alt=""
+                                    class="contact-img"></a>
+                            <a href="" target="_blank"><img loading="lazy" src="/logo-img/OIP.png" alt=""
+                                    class="contact-img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 City-Hut Pizza House. All Rights Reserved.</p>
+            </div>
+    </footer>
+
+
+    <script src="pizza.js"></script>
+    <script src="menu.js"></script>
+    <script src="menuToggle.js"></script>
+    <script src="script.js">
+
+    </script>
+    <!-- <script>
+        itemdata = itemdata2;
+        renderCards();
+    </script> -->
+</body>
+
+</html>

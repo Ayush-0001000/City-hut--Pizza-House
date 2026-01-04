@@ -1,0 +1,188 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Reusable Container and Button */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.btn-contact, .btn-primary {
+ display: inline-block;
+
+    box-shadow: 0 4px 10px rgb(255, 11, 11);
+    padding: 6px 12px;
+    border: #eeff00 3px solid;
+    border-radius: 12px;
+    background: #ff0000;
+    justify-content: center;
+    text-align: center;
+    font-size: 33px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 40px 0 50px;
+
+
+
+}
+
+.btn-primary:hover, .btn-contact:hover {
+    background-color: #e64a19;
+}
+
+
+/* --- 1. Header Styles (Consistent) --- */
+.main-header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #ff5722;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hidden on desktop */
+}
+
+/* Main page button styling */
+.page-main-button {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+.slogan-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* --- 2. About Feature Section Styles (Flexbox for Alternating Layout) --- */
+.about-feature-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-content {
+    flex: 1; /* Allows text to take up available space */
+}
+
+.feature-title {
+    font-size: 1.8rem;
+    color: #ff5722;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.feature-text {
+    margin-bottom: 10px;
+}
+
+.feature-box {
+    flex-basis: 40%; /* Image box takes 40% of the space */
+    max-width: 400px;
+    height: 250px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Style for alternating layout (Image on the left) */
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.out-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Tablet (768px and down) */
+@media (max-width: 768px) {
+    /* Stack feature sections vertically */
+    .about-feature-section {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* For the reverse layout, swap the order back to text-then-image */
+    .reverse-layout {
+        flex-direction: column;
+    }
+
+    .feature-content {
+        order: 1; /* Text comes first */
+    }
+
+    .feature-box {
+        order: 2; /* Image comes second */
+        flex-basis: auto;
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+    }
+    
+
+}
+
+/* Mobile (480px and down) */
+@media (max-width: 480px) {
+    /* Header: Show menu toggle, hide contact button */
+    .btn-contact {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    
+    .feature-title {
+        font-size: 1.5rem;
+    }
+
+    .feature-box {
+        height: 150px;
+    }
+ 
+}

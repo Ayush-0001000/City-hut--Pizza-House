@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza - Pizza House</title>
+    <link rel="icon" href="/logo-img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../app.css/header-footer.css">
+    <link rel="preload" href="../app.css/index.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/index.css">
+    </noscript>
+    <link rel="preload" href="../app.css/contect.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/contect.css">
+    </noscript>
+
+    <link rel="preload" href="../app.css/menu.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/menu.css">
+    </noscript>
+</head>
+
+<body>
+    <!--* ------------------- this page heading  -->
+    <header>
+        <section class="header-section">
+<div class="logo-img">
+                <a href="#"><img loading="lazy" src="../logo-img/new-logo-1.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House"></a>
+            </div>
+            <nav class="nav-baar desktop-nav">
+                <li><a href="../index.html" class="active">home</a></li>
+                <li><a href="../menu.html">menu</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../outlate.html">outlet</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </nav>
+            <nav class="nav-baar mobile-menu">
+                <div class="logo-img">
+                    <img loading="lazy" src="../logo-img/logo.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House">
+                    <div class="close-btn">X</div>
+                </div>
+                <li><a href="../index.html" class="active">home</a></li>
+                <li><a href="../menu.html">menu</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../outlate.html">outlet</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </nav>
+            <div class="menu-bar"><img loading="lazy" src="../logo-img/Three horizontally a.png" id="three-line" alt="">
+            </div>
+        </section>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+
+
+        <!-- PIZZA CARDS PAGE -->
+        <section class="menu-section" id="menuPage">
+            <h1 class="menu-grid-title">Pizza</h1>
+            <div class="grid" id="cardsContainer">
+                <!-- Cards injected by JS -->
+            </div>
+        </section>
+
+
+
+        <!-- PIZZA DETAIL PAGE -->
+        <section id="detailPage" style="display:none;">
+            <div class="row" style="justify-content:space-between;">
+                <div class="row">
+                    <button class="backBtn" onclick="goBack()">← Back</button>
+                    <div style="color:#ff0000;font-size:14px" id="crumb">Pizza / </div>
+                </div>
+            </div>
+
+            <div class="detail-wrap">
+                <div class="detail-main">
+                    <div class="slider" id="sliderRoot">
+                        <div class="slides" id="slides">
+                            <!-- slides injected -->
+                        </div>
+                        <div class="controls">
+                            <button class="btn" id="prevBtn">‹</button>
+                            <button class="btn" id="nextBtn">›</button>
+                        </div>
+                    </div>
+                    <div class="dots" id="dotsWrap"></div>
+
+                    <h2 id="detailTitle"
+                        style="margin-top:20px;margin-bottom:8px;color:#333;font-size:28px;font-weight:700"></h2>
+
+                    <p class="desc" id="detailDesc"></p>
+                </div>
+
+                <aside class="detail-side">
+                    <h3 style="margin-top:0;color:#333" id="sideTitle"></h3>
+                    <p id="sideText" style="color:#666;margin-top:12px"></p>
+                    <div style="margin-top:20px">
+                        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px;">
+                            <label style="font-weight:600;color:#333;font-size:14px;">Crust</label>
+                            <select id="pizzaType" onchange="updatePizzaPrice()"
+                                style="padding:10px;border-radius:6px;border:1px solid #ddd;">
+                                <option value="pan">Pan</option>
+                                <option value="cheeseBurst">Cheese Burst</option>
+                            </select>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px;">
+                            <label style="font-weight:600;color:#333;font-size:14px;">Size</label>
+                            <select id="pizzaSize" onchange="updatePizzaPrice()"
+                                style="padding:10px;border-radius:6px;border:1px solid #ddd;">
+                                <option value="regular">Regular</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        <div id="pizzaPrice">
+                        </div>
+                    </div>
+
+                </aside>
+                <div id="btn-contact-footer"> <a href="/contact.html">Contact</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+
+
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Reach Us</h3>
+                <div class="footer-info">
+                    <p><strong>Address:</strong> Lohara road, near Saraswati shisu mandir, Ramnagar, Kawardha,
+                        Chhattisgarh 491995 </p>
+                    <p><strong>Phone:</strong> +91 8817287066</p>
+                    <p><strong>Email:</strong> info@cityhutpizza.com</p>
+                    <p><strong>View </strong><a href="/contact.html" style="color: var(--accentColor);">more..</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/menu.html">Menu</a></li>
+                    <li><a href="/outlate.html">outlet</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Developed By:</h3>
+                <div class="footer-info">
+                    <p> Ayush Pandey</p>
+                    <p> Web Development, UI/UX Design, JavaScript</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/cityhut_pizza?igsh=YTdqa25qemQ4OGtu" target="_blank"><img
+                                loading="lazy" src="/logo-img/insta.webp" alt="" class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/x.webp" alt=""
+                                class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/linkedin.webp" alt=""
+                                class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/OIP.png" alt=""
+                                class="contact-img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 City-Hut Pizza House. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+
+    <script src="../pizza.js"></script>
+    <script src="../menuToggle.js"></script>
+    <script>
+        /*
+            Pizza page script
+            - Data source: `pizzaCardsData` (provided by `../pizza.js`).
+            - Renders pizza cards into `#cardsContainer`.
+            - Pricing comes from `window.pizzaTypes` / `window.pizzaMenu` (see `pizza.js`).
+            - Flow: clicking a card calls `openCard(id)` -> shows detail overlay and `populateDetail(id)`.
+            - Detail panel: images -> `#slides`; title -> `#detailTitle`; aside -> `#sideTitle`, `#sideText`, inline pizza controls (`#pizzaType`, `#pizzaSize`) and `#pizzaPrice`.
+        */
+        // Use pizza data from pizza.js
+        const pizzaData = pizzaCardsData; const cardsContainer = document.getElementById('cardsContainer');
+        let currentId = null, currentIndex = 0, slideTimer = null;
+        const slidesEl = document.getElementById('slides'), dotsWrap = document.getElementById('dotsWrap'), prevBtn = document.getElementById('prevBtn'), nextBtn = document.getElementById('nextBtn');
+
+        // Render pizza cards
+        function renderCards() {
+            console.log("render cards");
+            if (!cardsContainer) return;
+            cardsContainer.innerHTML = '';
+            Object.keys(pizzaData).forEach(key => {
+                const item = pizzaData[key];
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.cursor = 'pointer';
+
+                const thumbHTML = item.images ? ("<img loading=\"lazy\" src=\"" + item.images[0] + "\" alt=\"" + item.title + "\">") : ("<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:#f5f5f5;color:#666;font-size:14px;font-weight:600;\">Pizza</div>");
+                card.innerHTML = "<div class=\"thumb\">" + thumbHTML + "</div><h3>" + item.title + "</h3>";
+                card.onclick = () => openCard(key);
+                cardsContainer.appendChild(card);
+            })
+        }
+
+        // Open detail page
+        function openCard(id) {
+            document.getElementById("menuPage").style.display = "none";
+            document.getElementById("detailPage").style.display = "block";
+            currentId = id;
+            currentIndex = 0;
+            populateDetail(id);
+            startAutoPlay();
+        }
+
+        // Populate detail
+        function populateDetail(id) {
+            const item = pizzaData[id];
+            if (!item) return;
+            document.getElementById('crumb').innerText = 'Pizza / ' + item.title;
+            document.getElementById('detailTitle').innerText = item.title;
+            document.getElementById('detailDesc').innerText = item.desc;
+            document.getElementById('sideTitle').innerText = item.title;
+            document.getElementById('sideText').innerText = item.desc;
+
+            // Initialize price (section is set by default from pizza data)
+            setTimeout(() => updatePizzaPrice(), 50);
+            slidesEl.innerHTML = '';
+            dotsWrap.innerHTML = '';
+            const slideSource = item.images;
+            slideSource.forEach((src, i) => {
+                const s = document.createElement('div');
+                s.className = 'slide';
+                s.innerHTML = "<img loading=\"lazy\" src=\"" + src + "\" alt=\"" + item.title + " image " + (i + 1) + "\">";
+                slidesEl.appendChild(s);
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsWrap.appendChild(dot);
+            });
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            slidesEl.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
+            Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slidesEl.children.length) % slidesEl.children.length;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slidesEl.children.length;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function goToSlide(i) {
+            currentIndex = i;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function startAutoPlay() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(() => nextSlide(), 3500);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(slideTimer);
+            slideTimer = setTimeout(() => startAutoPlay(), 2800);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(slideTimer);
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        let startX = 0, isDown = false;
+        const sliderRoot = document.getElementById('sliderRoot');
+        sliderRoot.addEventListener('pointerdown', e => { isDown = true; startX = e.clientX || (e.touches && e.touches[0].clientX); stopAutoPlay() });
+        window.addEventListener('pointerup', e => { if (!isDown) return; isDown = false; const dx = (e.clientX || 0) - startX; if (dx > 40) prevSlide(); else if (dx < -40) nextSlide(); startAutoPlay() });
+
+        function goBack() {
+            const detailPage = document.getElementById("detailPage");
+            const menuPage = document.getElementById("menuPage");
+            if (detailPage && menuPage) {
+                detailPage.style.display = "none";
+                menuPage.style.display = "block";
+            }
+            stopAutoPlay();
+        }
+        function goBackToDetail() {
+            document.getElementById("pizzaOptionsPage").style.display = "none";
+            document.getElementById("detailPage").style.display = "block";
+        }
+
+        // Use pizza pricing from pizza.js (safe access via window)
+        function updatePizzaPrice() {
+            const typeEl = document.getElementById("pizzaType");
+            const sizeEl = document.getElementById("pizzaSize");
+            const priceEl = document.getElementById("pizzaPrice");
+            if (!typeEl || !sizeEl || !priceEl) return;
+
+            const type = typeEl.value;
+            const size = sizeEl.value;
+
+            // Get section from current pizza data
+            const item = pizzaData[currentId];
+            if (!item) return;
+            const section = 'section' + item.section;
+
+            let price = undefined;
+            if (window.pizzaMenu && window.pizzaMenu[section] && window.pizzaMenu[section][type]) {
+                price = window.pizzaMenu[section][type][size];
+            }
+            priceEl.innerText = price !== undefined ? '₹' + price : '';
+        }
+
+        function addPizzaToCart() {
+            const type = document.getElementById("pizzaType").value;
+            const section = document.getElementById("pizzaSection").value;
+            const size = document.getElementById("pizzaSize").value;
+            const price = document.getElementById("pizzaPrice").innerText;
+
+            const typeDisplay = type === 'pan' ? 'Pan Pizza' : 'Cheese Pizza';
+            const sizeDisplay = size.charAt(0).toUpperCase() + size.slice(1);
+
+            alert("Added to Order:\n" + pizzaData[currentId].title + "\n" + typeDisplay + " - " + section.toUpperCase() + " - " + sizeDisplay + "\n" + price);
+            goBackToDetail();
+        }
+
+        window.addEventListener('resize', () => updateSlidePosition());
+
+        // Initialize
+        renderCards();
+    </script>
+</body>
+
+</html>

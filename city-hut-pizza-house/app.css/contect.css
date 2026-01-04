@@ -1,0 +1,390 @@
+/* Reusable Container and Button */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.btn-contact,
+.btn-primary {
+
+
+
+    display: inline-block;
+
+    box-shadow: 0 4px 10px rgb(255, 11, 11);
+    padding: 6px 12px;
+    border: #eeff00 3px solid;
+    border-radius: 12px;
+    background: #ff0000;
+    justify-content: center;
+    text-align: center;
+    font-size: 33px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 40px 0 50px;
+}
+
+.btn-primary:hover,
+.btn-contact:hover {
+    background-color: #e64a19;
+}
+
+
+
+/* --- 2. Contact Section --- */
+.contact-section {
+    text-align: center;
+    padding: 40px 0 20px;
+    border-radius: 30px;
+    margin: 50px 0 0px;
+
+}
+
+.contact-section>.btn-primary {
+    margin-bottom: 50px;
+}
+
+.contact-links-grid-1 {
+    display: flex;
+    box-shadow: #333 0 3px 7px;
+    border-radius: 20px;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.contact-links-grid-2 {
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    ;
+}
+
+.contact-links-grid-3 {
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+
+
+    pre {
+
+        font-size: 1rem;
+        color: #333;
+        line-height: 3;
+        padding-bottom: 10px;
+    }
+}
+
+.contact-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+
+.contact-link {
+
+    gap: 30px;
+    margin: 10px;
+    padding: 20px 10px;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.contact-link i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+
+.contact-link:hover {
+    color: #ff5722;
+}
+
+/* --- 3. Review Section --- */
+.review-section {
+    text-align: center;
+
+}
+
+.btn-review {
+    margin-bottom: 40px;
+}
+
+.review-slider {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align items to the bottom */
+    gap: 15px;
+    position: relative;
+    padding: 20px 0;
+}
+
+.slider-item {
+    width: 25%;
+    max-width: 180px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.8);
+    /* Scale down non-active items */
+    transition: all 0.3s ease;
+}
+
+.slider-item.active {
+    width: 35%;
+    /* Larger main item */
+    max-width: 250px;
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img-placeholder {
+    height: 120px;
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.slider-item.active .img-placeholder {
+    height: 180px;
+    background-color: #ff7043;
+    /* Highlight active image */
+    color: white;
+}
+
+.review-text {
+    font-size: 0.9rem;
+
+    color: #252525;
+}
+
+.slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.slide-nav.prev {
+    left: 140px;
+}
+
+.slide-nav.next {
+    right: 140px;
+}
+
+.thank-you-message {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    color: #ff0000;
+    font-weight: 700;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Tablet (768px and down) */
+@media (max-width: 768px) {
+    .slider-item {
+        width: 30%;
+        max-width: 150px;
+    }
+
+    .slider-item.active {
+        width: 40%;
+        max-width: 200px;
+    }
+
+    /* Change footer to 2 columns */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-group.location-links {
+        /* Move location links to a new line */
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+/* Mobile (480px and down) */
+@media (max-width: 480px) {
+
+    /* Show hamburger menu, hide contact button on mobile */
+    .btn-contact {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Stack contact links vertically */
+    .contact-links-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-link i {
+        font-size: 2rem;
+    }
+
+    /* Simplify slider for small screens */
+    .review-slider {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .slider-item {
+        width: 45%;
+        max-width: none;
+        transform: scale(1);
+        /* Don't scale non-active items */
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .slider-item.active {
+        width: 90%;
+        order: -1;
+        /* Move active item to the top */
+        max-width: none;
+    }
+
+    .img-placeholder,
+    .slider-item.active .img-placeholder {
+        height: 100px;
+    }
+
+    .slide-nav {
+        display: none;
+        /* Hide arrows on very small screens */
+    }
+
+    /* Stack footer items vertically */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-group a {
+        margin-bottom: 5px;
+    }
+}
+
+/* CSS for Mobile (480px and down) from previous response */
+@media (max-width: 480px) {
+
+    /* Simplify slider for small screens - just show the center one largely */
+    .review-slider {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .slider-item {
+        width: 45%;
+        max-width: none;
+        transform: scale(1);
+        /* Don't scale non-active items */
+    }
+
+    .slider-item.active {
+        width: 90%;
+        /* Make the active review much wider */
+        order: -1;
+        /* Move active item to the top visually */
+        max-width: none;
+    }
+
+    /* ... (rest of the CSS) ... */
+}
+
+/* --- Review Slider (Contact Page) Update --- */
+.review-slider {
+    /* New Layout Settings: */
+    position: relative;
+    /* Container is relative */
+    height: 350px;
+    /* Give it a fixed height to contain the absolute children */
+    overflow: hidden;
+    /* Hide slides that are out of bounds */
+    /* Original settings like text-align: center can be removed if they conflict */
+}
+
+.review-slider .slider-item {
+    /* New Slide Settings: */
+    position: absolute;
+    /* Children are absolute */
+    top: 0;
+    left: 50%;
+    /* Start all slides at the center point */
+    width: 300px;
+    /* Fixed width for consistent scaling */
+    max-width: 90%;
+    margin-left: -150px;
+    /* Pull back half the width to truly center them */
+
+    /* Animation and Initial State: */
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Ensure the content itself is styled as before */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Ensure the active slide is clickable/interactable */
+.review-slider .slider-item.active {
+    pointer-events: auto;
+}
+
+
+/* --- MOBILE OPTIMIZATION for Review Slider (480px and down) --- */
+@media (max-width: 480px) {
+    .review-slider {
+        height: 270px;
+        /* Increase height for content stacking */
+    }
+
+    .review-slider .slider-item {
+        width: 90%;
+        /* Use full width on mobile */
+        margin-left: -45%;
+        /* Pull back half the 90% width */
+
+        /* Adjust transforms for smaller screen shifts */
+        /* JS still handles the main logic, but we adjust the shift percentages */
+    }
+
+    .review-slider .slider-item.active .img-placeholder {
+        height: 216px;
+        /* Keep the center image large */
+    }
+}

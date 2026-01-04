@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/City-hut--Pizza-House/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger & Fries - Pizza House</title>
+    <link rel="icon" href="/logo-img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../app.css/header-footer.css">
+    <link rel="preload" href="../app.css/index.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/index.css">
+    </noscript>
+    <link rel="preload" href="../app.css/contect.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/contect.css">
+    </noscript>
+
+    <link rel="preload" href="../app.css/menu.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../app.css/menu.css">
+    </noscript>
+</head>
+
+<body>
+
+    <!--* ------------------- this page heading  -->
+    <header>
+        <section class="header-section">
+<div class="logo-img">
+                <a href="#"><img loading="lazy" src="../logo-img/new-logo-1.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House"></a>
+            </div>
+            <nav class="nav-baar desktop-nav">
+                <li><a href="../index.html" class="active">home</a></li>
+                <li><a href="../menu.html">menu</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../outlate.html">outlet</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </nav>
+            <nav class="nav-baar mobile-menu">
+                <div class="logo-img">
+                    <img loading="lazy" src="../logo-img/logo.png" alt="City Hut Pizza House"
+                        title="City Hut Pizza House">
+                    <div class="close-btn">X</div>
+                </div>
+                <li><a href="../index.html" class="active">home</a></li>
+                <li><a href="../menu.html">menu</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../outlate.html">outlet</a></li>
+                <li><a href="../contact.html">contact</a></li>
+            </nav>
+            <div class="menu-bar"><img loading="lazy" src="../logo-img/Three horizontally a.png" id="three-line" alt="">
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+
+
+
+        <!-- BURGER & FRIES MENU PAGE -->
+        <section class="menu-section" id="menuPage">
+            <h1 class="menu-grid-title">Burger & Fries</h1>
+            <div class="grid" id="cardsContainer">
+                <!-- Cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- DETAIL PAGE -->
+        <section id="detailPage" style="display:none;">
+            <div class="row" style="justify-content:space-between;">
+                <div class="row">
+                    <button class="backBtn" onclick="goBack()">← Back</button>
+                    <div style="color:#999;font-size:14px" id="crumb">Burger & Fries / </div>
+                </div>
+            </div>
+
+            <div class="detail-wrap">
+                <div class="detail-main">
+                    <div class="slider" id="sliderRoot">
+                        <div class="slides" id="slides">
+                            <!-- slides injected -->
+                        </div>
+                        <div class="controls">
+                            <button class="btn" id="prevBtn">‹</button>
+                            <button class="btn" id="nextBtn">›</button>
+                        </div>
+                    </div>
+                    <div class="dots" id="dotsWrap"></div>
+
+                    <h2 id="detailTitle"
+                        style="margin-top:20px;margin-bottom:8px;color:#333;font-size:28px;font-weight:700"></h2>
+                </div>
+
+                <aside class="detail-side">
+                    <h3 style="margin-top:0;color:#333" id="sideTitle"></h3>
+                    <div class="price" id="sidePrice"></div>
+                    <p id="sideText" style="color:#666;margin-top:12px"></p>
+                </aside>
+                <div id="btn-contact-footer"> <a href="/contact.html">Contact</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+
+
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Reach Us</h3>
+                <div class="footer-info">
+                    <p><strong>Address:</strong> Lohara road, near Saraswati shisu mandir, Ramnagar, Kawardha,
+                        Chhattisgarh 491995 </p>
+                    <p><strong>Phone:</strong> +91 8817287066</p>
+                    <p><strong>Email:</strong> info@cityhutpizza.com</p>
+                    <p><strong>View </strong><a href="/contact.html" style="color: var(--accentColor);">more..</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/menu.html">Menu</a></li>
+                    <li><a href="/outlate.html">outlet</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Developed By:</h3>
+                <div class="footer-info">
+                    <p> Ayush Pandey</p>
+                    <p> Web Development, UI/UX Design, JavaScript</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/cityhut_pizza?igsh=YTdqa25qemQ4OGtu" target="_blank"><img
+                                loading="lazy" src="/logo-img/insta.webp" alt="" class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/x.webp" alt=""
+                                class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/linkedin.webp" alt=""
+                                class="contact-img"></a>
+                        <a href="" target="_blank"><img loading="lazy" src="/logo-img/OIP.png" alt=""
+                                class="contact-img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 City-Hut Pizza House. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+
+    <script src="../menuToggle.js"></script>
+    <script>
+        /*
+            Burger & Fries page script
+            - Data source: `const burgerFriesData` defined below.
+            - Renders into `#cardsContainer` and uses `openCard` / `populateDetail` flow.
+            - Aside fields where meta is shown: `#sideTitle`, `#sidePrice`, `#sideText`.
+        */
+        const burgerFriesData = {
+            1: { title: "fries", desc: "  The timeless classic—golden, salted, and perfectly crispy on the outside.", images: ["../menu-img/fries/normal.jpg", "../menu-img/fries/normal2.jpg", "../menu-img/fries/normal3.jpg"], price: "₹90", link: "" },
+            2: { title: " 4 Cheese fries", desc: " Pure decadence. A mountain of fries smothered in a rich, velvety quartet of melted cheese.", images: ["../menu-img/fries/chessy.jpg", "../menu-img/fries/chessy2.jpg", "../menu-img/fries/chessy3.jpg"], price: "₹200 ", link: "" },
+            3: { title: "Peri Peri Fries", desc: ": For those who love a kick! Coated in a spicy, tangy African-inspired bird's eye chili seasoning.", images: ["../menu-img/fries/pery.jpg", "../menu-img/fries/pery2.jpg", "../menu-img/fries/pery3.jpg"], price: "₹100", link: "" },
+            4: { title: "Masala fries", desc: ". A flavorful upgrade tossed in a zesty blend of traditional Indian spices for a little extra \"zing\".", images: ["../menu-img/fries/masala.jpg", "../menu-img/fries/masala2.jpg", "../menu-img/fries/masala3.jpg"], price: "₹100", link: "" },
+            5: { title: "Normal Chips", desc: "Simple, crunchy, and satisfying—the ultimate snack for any time of day.", images: ["../menu-img/fries/normalchips.jpg", "../menu-img/fries/normalchips.jpg", "../menu-img/fries/normalchips.jpg"], price: "₹90", link: "" },
+            6: { title: "Peri Peri Chips", desc: "The perfect crunch meeting the perfect heat.", images: ["../menu-img/fries/perychips.jpg", "../menu-img/fries/perychips.jpg", "../menu-img/fries/perychips.jpg"], price: "₹100", link: "" },
+            8: { title: "tikki burger", desc: "A nostalgic favorite featuring a crispy, spiced potato patty topped with fresh greens.", images: ["../menu-img/fries-and-burgers/tikkiburger.jpg", "../menu-img/fries-and-burgers/tikkiburger2.jpg"], price: "₹80", link: "" },
+            9: { title: "veg burger", desc: "The essential garden-style burger, packed with fresh vegetables and a savory patty.", images: ["../menu-img/fries-and-burgers/vegburger.jpg", "../menu-img/fries-and-burgers/vegburger2.jpg", "../menu-img/fries-and-burgers/vegburger3.jpg"], price: "₹100", link: "" },
+            10: { title: "paneer burger", desc: "A soft, marinated slab of paneer (Indian cottage cheese), grilled or fried to perfection for a protein-rich bite.", images: ["../menu-img/fries-and-burgers/paneerburger.jpg", "../menu-img/fries-and-burgers/paneerburger.jpg2"], price: "₹120", link: "" },
+            11: { title: "maharaja burger", desc: "The \"King\" of the menu—a massive, multi-layered burger designed for a royal appetite.", images: ["../menu-img/fries/perychips.jpg", "../menu-img/fries/perychips.jpg", "../menu-img/fries/perychips.jpg"], price: "₹150", link: "" },
+            12: { title: "italian veg burger", desc: " A Mediterranean twist, likely featuring herbs like oregano, basil, and a splash of marinara or pesto.", images: ["../menu-img/fries/perychips.jpg", "../menu-img/fries/perychips.jpg", "../menu-img/fries/perychips.jpg"], price: "₹150", link: "" },
+            13: { title: "3 cheese burger", desc: "A cheese lover's dream, layering three different varieties of cheese over a juicy patty for maximum meltiness", images: ["../menu-img/fries/perychips.jpg", "../menu-img/fries/perychips.jpg", "../menu-img/fries/perychips.jpg"], price: "₹200", link: "" }
+        };
+
+        const itemdata = burgerFriesData;
+        const cardsContainer = document.getElementById('cardsContainer');
+
+        function renderCards() {
+            cardsContainer.innerHTML = '';
+            Object.keys(burgerFriesData).forEach(key => {
+                const item = burgerFriesData[key];
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.cursor = 'pointer';
+                card.onclick = () => openCard(key);
+
+                const thumbHTML = item.images ? ("<img loading=\"lazy\" src=\"" + item.images[0] + "\" alt=\"" + item.title + "\">") : ("<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:#f5f5f5;color:#666;font-size:14px;font-weight:600;\">" + (item.text ? item.text[0] : '') + "</div>");
+                card.innerHTML = "<div class=\"thumb\">" + thumbHTML + "</div><h3>" + item.title + "</h3><p>" + item.desc + "</p><div class=\"price\">" + item.price + "</div>";
+
+                cardsContainer.appendChild(card);
+            })
+        }
+        renderCards();
+
+        let currentId = null, currentIndex = 0, slideTimer = null;
+        const slidesEl = document.getElementById('slides'), dotsWrap = document.getElementById('dotsWrap'), prevBtn = document.getElementById('prevBtn'), nextBtn = document.getElementById('nextBtn');
+
+        function openCard(id) {
+            document.getElementById("menuPage").style.display = "none";
+            document.getElementById("detailPage").style.display = "block";
+            currentId = id;
+            currentIndex = 0;
+            populateDetail(id);
+            startAutoPlay();
+        }
+
+        function populateDetail(id) {
+            const item = burgerFriesData[id];
+            if (!item) return;
+            document.getElementById('crumb').innerText = 'Burger & Fries / ' + item.title;
+            document.getElementById('detailTitle').innerText = item.title;
+            document.getElementById('sidePrice').innerText = item.price || '';
+            document.getElementById('sideTitle').innerText = item.title;
+            document.getElementById('sideText').innerText = item.desc;
+            slidesEl.innerHTML = '';
+            dotsWrap.innerHTML = '';
+            const slideSource = item.images || item.text;
+            slideSource.forEach((src, i) => {
+                const s = document.createElement('div');
+                s.className = 'slide';
+                if (item.images) {
+                    s.innerHTML = "<img loading=\"lazy\" src=\"" + src + "\" alt=\"" + item.title + " image " + (i + 1) + "\">";
+                } else {
+                    s.innerHTML = "<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:320px;background:#f5f5f5;color:#666;font-size:18px;font-weight:600;\">" + src + "</div>";
+                }
+                slidesEl.appendChild(s);
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsWrap.appendChild(dot)
+            });
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            slidesEl.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
+            Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === currentIndex))
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slidesEl.children.length) % slidesEl.children.length;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slidesEl.children.length;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function goToSlide(i) {
+            currentIndex = i;
+            updateSlidePosition();
+            resetAutoPlay();
+        }
+
+        function startAutoPlay() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(() => nextSlide(), 3500)
+        }
+
+        function resetAutoPlay() {
+            clearInterval(slideTimer);
+            slideTimer = setTimeout(() => startAutoPlay(), 2800)
+        }
+
+        function stopAutoPlay() {
+            clearInterval(slideTimer)
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        let startX = 0, isDown = false;
+        const sliderRoot = document.getElementById('sliderRoot');
+        sliderRoot.addEventListener('pointerdown', e => {
+            isDown = true;
+            startX = e.clientX || (e.touches && e.touches[0].clientX);
+            stopAutoPlay()
+        });
+        window.addEventListener('pointerup', e => {
+            if (!isDown) return;
+            isDown = false;
+            const dx = (e.clientX || 0) - startX;
+            if (dx > 40) prevSlide();
+            else if (dx < -40) nextSlide();
+            startAutoPlay()
+        });
+
+        function goBack() {
+            document.getElementById("detailPage").style.display = "none";
+            document.getElementById("menuPage").style.display = "block";
+            stopAutoPlay();
+        } function addToCart() {
+            alert((burgerFriesData[currentId]?.title || 'Item') + " added to your order!")
+        }
+
+        window.addEventListener('resize', () => updateSlidePosition());
+    </script>
+</body>
+
+</html>
