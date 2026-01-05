@@ -399,6 +399,40 @@ footer {
     color: var(--accentColor);
 }
 
+/* --- UX: disable blinking caret + prevent text selection site-wide --- */
+html,
+body,
+* {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
+    user-select: none;
+    /* Standard */
+    caret-color: transparent;
+    /* Hide text caret when elements receive focus */
+}
+
+/* Restore default behavior for interactive form controls */
+a,
+button,
+input,
+textarea,
+select {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+    caret-color: auto;
+}
+
+/* Hide caret on focus for any remaining elements */
+*:focus {
+    caret-color: transparent;
+}
+
 .footer-links {
     list-style: none;
 }
