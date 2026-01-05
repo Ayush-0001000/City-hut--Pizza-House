@@ -12,25 +12,22 @@
 */
 // Speciality Section - Separate JS for index.html
 const specialityData = {
-    1: { title: "Margherita Pizza", desc: "Classic pizza with fresh mozzarella, basil, and tomato sauce.", images: ["banner/bg2.png"], price: "₹100", link: "manu/pizza.html" },
+    1: { title: "Margherita Pizza", desc: "Classic pizza with fresh mozzarella, basil, and tomato sauce.", images: ["banner/bg2.png"], price: "₹100", link: "./manu/pizza.html" },
 
-    2: { title: "Schezwan Rice", desc: " For those who crave heat—rice tossed in a bold, spicy, and garlicky Schezwan sauce.", images: ["./menu-img/basmati-special/schezwanrice2.jpg"], price: "₹130", link: "manu/burger&french,fries.html" },
+    2: { title: "Schezwan Rice", desc: " For those who crave heat—rice tossed in a bold, spicy, and garlicky Schezwan sauce.", images: ["./menu-img/basmati-special/schezwanrice2.jpg"], price: "₹130", link: "../manu/burger&french,fries.html" },
 
-    3: { title: "Chili Chicken", desc: " Soft paneer chunks tossed with bell peppers and onions in a classic soy-based sauce..", images: ["../menu-img/chinese-chillies/paneer-chilli2.jpg"], price: "₹140", link: "manu/pizza.html" },
+    3: { title: "Chili Chicken", desc: " Soft paneer chunks tossed with bell peppers and onions in a classic soy-based sauce..", images: ["./menu-img/chinese-chillies/paneer-chilli2.jpg"], price: "₹140", link: "./manu/pizza.html" },
+    4: { title: "Veg Hara Bhara Kabab", desc: "Vibrant green patties made with spinach, peas, and spices.", images: ["./menu-img/petro-bites/harabhra-kabab2.jpg"], price: "₹100", link: "./manu/chinese-chillis.html" },
 
-    4: { title: "Veg Hara Bhara Kabab", desc: "Vibrant green patties made with spinach, peas, and spices.", images: ["../menu-img/petro-bites/harabhra-kabab2.jpg"], price: "₹100", link: "manu/chinese-chillis.html" },
+    5: { title: "Schezwan Noodles", desc: "Fiery noodles tossed in a signature spicy sauce.", images: ["./menu-img/premium-noodles/schezwan-noodles2.jpg"], price: "₹160", link: "./manu/coffee&tea.html" },
+    6: { title: "Bombay Masala Sandwich", desc: " A street-food favorite packed with spiced potatoes and zesty chutney for a true taste of Mumbai.", images: ["./menu-img/sandwich/bombay-sand.jpg"], price: "₹90", link: "./manu/pizza.html" },
+    7: { title: "Peri Peri Corn", desc: "Sweet corn with a spicy and tangy African bird's eye chili kick.", images: ["./menu-img/corn-spring/pery-corn.jpg"], price: "₹50", link: "./manu/pizza.html" },
 
-    5: { title: "Schezwan Noodles", desc: "Fiery noodles tossed in a signature spicy sauce.", images: ["../menu-img/premium-noodles/schezwan-noodles2.jpg"], price: "₹160", link: "manu/coffee&tea.html" },
+    8: { title: "Red Sauce Pasta", desc: "Robust pasta in a tangy, herbed tomato sauce.", images: ["./menu-img/crispy-and-pasta/red-pasta.jpg"], price: "₹120", link: "./manu/crispy&pasta.html" },
 
-    6: { title: "Bombay Masala Sandwich", desc: " A street-food favorite packed with spiced potatoes and zesty chutney for a true taste of Mumbai.", images: ["../menu-img/sandwich/bombay-sand.jpg"], price: "₹90", link: "manu/pizza.html" },
+    9: { title: "Hot Coffee", desc: " A classic, warming brew to start your day or end your meal.", images: ["./menu-img/coffee-and-tea/milk-coffee2.jpg", "./menu-img/coffee-and-tea/milk-coffee.jpg"], price: "₹25", link: "./manu/pizza.html" },
 
-    7: { title: "Peri Peri Corn", desc: "Sweet corn with a spicy and tangy African bird's eye chili kick.", images: ["../menu-img/corn-spring/pery-corn.jpg"], price: "₹50", link: "manu/pizza.html" },
-
-    8: { title: "Red Sauce Pasta", desc: "Robust pasta in a tangy, herbed tomato sauce.", images: ["../menu-img/crispy-and-pasta/red-pasta.jpg"], price: "₹120", link: "manu/crispy&pasta.html" },
-
-    9: { title: "Hot Coffee", desc: " A classic, warming brew to start your day or end your meal.", images: ["../menu-img/coffee-and-tea/milk-coffee2.jpg", "../menu-img/coffee-and-tea/milk-coffee.jpg"], price: "₹25", link: "manu/pizza.html" },
-
-    10: { title: "Blue Lagoon", desc: "A striking blue, citrusy, and tropical non-alcoholic drink.", images: ["../menu-img/mocktail-and-cold-delight/blue-lagoon.jpg", "../menu-img/mocktail-and-cold-delight/blue-lagoon2.jpg"], price: "₹100", link: "manu/mocktail.html" }
+    10: { title: "Blue Lagoon", desc: "A striking blue, citrusy, and tropical non-alcoholic drink.", images: ["./menu-img/mocktail-and-cold-delight/blue-lagoon.jpg", "./menu-img/mocktail-and-cold-delight/blue-lagoon2.jpg"], price: "₹100", link: "./manu/mocktail.html" }
 };
 
 // Debug: show that speciality data has been loaded into memory
