@@ -20,7 +20,7 @@ const specialityData = {
 
 
   
-    3: { title: "Chili Chicken", desc: " Soft paneer chunks tossed with bell peppers and onions in a classic soy-based sauce..", images: ["./menu-img/chinese-chillies/paneer-chilli2.jpg"], price: "₹140", link: "./manu/chinese-chillis.html" },
+    3: { title: "Chili paneer", desc: " Soft paneer chunks tossed with bell peppers and onions in a classic soy-based sauce..", images: ["./menu-img/chinese-chillies/paneer-chilli2.jpg"], price: "₹140", link: "./manu/chinese-chillis.html" },
     
     4: { title: "Veg Hara Bhara Kabab", desc: "Vibrant green patties made with spinach, peas, and spices.", images: ["./menu-img/petro-bites/harabhra-kabab2.jpg"], price: "₹100", link: "./manu/petro-bite&soup.html" },
 
