@@ -66,7 +66,7 @@ function renderSpecialityCards() {
             console.log('renderSpecialityCards: item has link, creating anchor', key, item.link);
             const a = document.createElement('a');
             a.href = item.link;
-            a.target = '_blank';
+           
             a.rel = 'noopener noreferrer';
             a.style.display = 'block';
             a.style.textDecoration = 'none';
