@@ -24,7 +24,11 @@
 </head>
 
 <body>
-    <!--* ------------------- this page heading  -->
+    <!--
+        About Page - City Hut Pizza House
+        Purpose: Describes the restaurant's history, owner, vision, material quality and freshness.
+        Notes: Uses `app.css/about.css` for page-specific styles and reuses shared header/footer.
+    -->
     <header>
         <section class="header-section">
 
@@ -60,6 +64,7 @@
 
 
 
+    <!-- MAIN: Page content container (About page sections for owner, vision, quality, freshness) -->
     <main>
         <div class="container">
 
@@ -90,12 +95,15 @@
             <section id="vision" class="about-feature-section">
                 <div class="feature-content">
                     <h3 class="feature-title">Vision</h3>
-                    <p class="feature-text">Born as Cafe Pizza House on September 24, 2020, and reborn with fresh spirit as City Hut Pizza House on March 23, 2023, we carry forward our journey with the promise—We are serving the freeness—a story of flavor, resilience, and community that keeps growing with every slice.
+                    <p class="feature-text">Born as Cafe Pizza House on September 24, 2020, and reborn with fresh spirit
+                        as City Hut Pizza House on March 23, 2023, we carry forward our journey with the promise—We are
+                        serving the freeness—a story of flavor, resilience, and community that keeps growing with every
+                        slice.
                     </p>
-                    <p class="feature-text"><b>Our mission </b> 
-                        Our mission is to craft delicious pizzas with fresh ingredients and 
+                    <p class="feature-text"><b>Our mission </b>
+                        Our mission is to craft delicious pizzas with fresh ingredients and
                         warm hospitality, creating a place where people connect
-                         and experience the spirit of freeness.
+                        and experience the spirit of freeness.
 
                     </p>
                 </div>
@@ -106,9 +114,10 @@
             <section id="material-quality" class="about-feature-section reverse-layout">
                 <div class="feature-content">
                     <h3 class="feature-title">Material Quality</h3>
-                    <p class="feature-text">At City Hut Pizza House, we believe that true freeness begins with 
+                    <p class="feature-text">At City Hut Pizza House, we believe that true freeness begins with
                         uncompromising quality—every dough is hand‑prepared, every topping carefully selected,
-                         and every ingredient sourced with freshness and authenticity in mind, so that each slice not only satisfies hunger but also delivers trust, flavor, 
+                        and every ingredient sourced with freshness and authenticity in mind, so that each slice not
+                        only satisfies hunger but also delivers trust, flavor,
                         and the joy of sharing something made with care.</p>
                     <p class="feature-text">Rigorous standards ensure every pizza meets the highest taste and safety
                         requirements.</p>
@@ -126,7 +135,9 @@
                 </div>
                 <div class="feature-content">
                     <h3 class="feature-title">Freshness</h3>
-                    <p class="feature-text">At City Hut Pizza House, freshness is our heartbeat—every morning begins with hand‑prepared dough, crisp vegetables, and carefully chosen ingredients, so that the aroma, taste, and spirit of 
+                    <p class="feature-text">At City Hut Pizza House, freshness is our heartbeat—every morning begins
+                        with hand‑prepared dough, crisp vegetables, and carefully chosen ingredients, so that the aroma,
+                        taste, and spirit of
                         freeness greet every guest the moment they step inside.</p>
                     <p class="feature-text">We prioritize speed and quality to deliver a truly fresh meal every time.
                     </p>
@@ -148,6 +159,7 @@
 
 
 
+    <!-- FOOTER: contact info, quick links and site credits (shared across site) -->
     <footer class="main-footer">
 
 
@@ -200,6 +212,14 @@
         </div>
     </footer>
 
+    <!--
+        Scripts (order matters for dependencies):
+          - `../script.js`: site-wide script included relative to this file's location.
+          - `app.js`: page-specific or legacy script (kept if needed).
+          - `menuToggle.js`: handles mobile menu toggling.
+          - `script.js`: common UI logic used site-wide.
+          - `copyright.js`: footer year/update helpers.
+    -->
     <script src="../script.js"></script>
 
     <script src="app.js"></script>

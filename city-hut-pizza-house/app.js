@@ -1,5 +1,12 @@
 
-// Home Page App.js - Used by category pages (sandwich.html, noodles.html, etc.)
+/*
+    app.js - Shared data & rendering for category pages
+    Purpose:
+      - Provide sample `itemdata` used to render category cards on various subpages
+      - Render cards, handle detail views (sliders, crumbs, detail content), and provide small utilities (lazy-loading)
+    Notes:
+      - Avoid changing element IDs (e.g., `cardsContainer`, `detailPage`, `slides`) since the HTML and other scripts depend on them.
+*/
 const itemdata = {
     1: { title: "Margherita Pizza", desc: "Classic pizza with fresh mozzarella, basil, and tomato sauce.", images: ["banner/bg2.png", "banner/bg2.png", "banner/bg2.png"], link: "manu/pizza.html" },
 
@@ -25,6 +32,8 @@ const itemdata = {
 
 function makeSVGDataURI(label = "Item", bg = "#fff", accent = "#333") { var svg = "<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='700'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='" + bg + "' stop-opacity='1'/><stop offset='1' stop-color='" + accent + "' stop-opacity='0.06'/></linearGradient></defs><rect width='100%' height='100%' fill='url(#g)'/><g><rect x='40' y='40' width='1120' height='620' rx='20' fill='rgba(255,255,255,0.04)'/><text x='50%' y='48%' dominant-baseline='middle' text-anchor='middle' font-family='system-ui, Arial' font-size='54' fill='" + accent + "' font-weight='700'>" + escapeXML(label) + "</text></g></svg>"; return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg) }
 function escapeXML(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') } const cardsContainer = document.getElementById('cardsContainer');
+// Render menu cards into the target container (default `cardsContainer`).
+// Each card may be wrapped in a link (if `item.link` exists) or be a non-clickable card.
 function renderCards(containerId = 'cardsContainer') {
     const container = cardsContainer;
     if (!container) return;
@@ -55,7 +64,10 @@ function renderCards(containerId = 'cardsContainer') {
 renderCards('cardsContainer');
 
 let currentId = null, currentIndex = 0, slideTimer = null; const slidesEl = document.getElementById('slides'), dotsWrap = document.getElementById('dotsWrap'), prevBtn = document.getElementById('prevBtn'), nextBtn = document.getElementById('nextBtn');
+// Show the detail view for the clicked item and initialize the slider.
 function openCard(id) { document.getElementById("menuPage").style.display = "none"; document.getElementById("detailPage").style.display = "block"; currentId = id; currentIndex = 0; populateDetail(id); startAutoPlay() }
+
+// Populate the detail panel with title, description, price and build slides/dots.
 function populateDetail(id) { const item = itemdata[id]; if (!item) return; document.getElementById('crumb').innerText = 'Menu / ' + item.title; document.getElementById('detailTitle').innerText = item.title; document.getElementById('detailDesc').innerText = item.desc; document.getElementById('detailPrice').innerText = item.price || ''; document.getElementById('sideTitle').innerText = item.title; document.getElementById('sideText').innerText = item.desc; slidesEl.innerHTML = ''; dotsWrap.innerHTML = ''; const slideSource = item.images || item.text; slideSource.forEach((src, i) => { const s = document.createElement('div'); s.className = 'slide'; if (item.images) { s.innerHTML = "<img loading=\"lazy\" src=\"" + src + "\" alt=\"" + item.title + " image " + (i + 1) + "\">"; } else { s.innerHTML = "<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:320px;background:#f5f5f5;color:#666;font-size:18px;font-weight:600;\">" + src + "</div>"; } slidesEl.appendChild(s); const dot = document.createElement('div'); dot.className = 'dot' + (i === 0 ? ' active' : ''); dot.addEventListener('click', () => goToSlide(i)); dotsWrap.appendChild(dot) }); updateSlidePosition() }
 function updateSlidePosition() { slidesEl.style.transform = "translateX(-" + (currentIndex * 100) + "%)"; Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === currentIndex)) }
 function prevSlide() { currentIndex = (currentIndex - 1 + slidesEl.children.length) % slidesEl.children.length; updateSlidePosition(); resetAutoPlay() }
@@ -69,6 +81,7 @@ let startX = 0, isDown = false; const sliderRoot = document.getElementById('slid
 sliderRoot.addEventListener('pointerdown', e => { isDown = true; startX = e.clientX || (e.touches && e.touches[0].clientX); stopAutoPlay() });
 window.addEventListener('pointerup', e => { if (!isDown) return; isDown = false; const dx = (e.clientX || 0) - startX; if (dx > 40) prevSlide(); else if (dx < -40) nextSlide(); startAutoPlay() });
 function goBack() { document.getElementById("detailPage").style.display = "none"; document.getElementById("menuPage").style.display = "block"; stopAutoPlay() }
+// Temporary UI helper: notify user an item is added to cart (placeholder behavior)
 function addToCart() { alert((itemdata[currentId]?.title || 'Item') + " added to your order!") }
 window.addEventListener('resize', () => updateSlidePosition());
 

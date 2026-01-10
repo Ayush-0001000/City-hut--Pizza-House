@@ -21,6 +21,12 @@
 <body>
 
 
+    <!--
+        Index Page - City-Hut Pizza House
+        Purpose: Main landing page. Contains header/navigation, hero banner,
+                 speciality section (populated by `speciality.js`), and footer.
+        Note: Do not change IDs or class names as JS/CSS depend on them.
+    -->
     <!--* ------------------- this page heading  -->
     <header>
         <section class="header-section">
@@ -30,11 +36,11 @@
                         title="City Hut Pizza House"></a>
             </div>
             <nav class="nav-baar desktop-nav">
-              <li><a href="index.html" class="active">home</a></li>
+                <li><a href="index.html" class="active">home</a></li>
                 <li><a href="menu.html">menu</a></li>
-                 <li><a href="outlate.html">outlet</a></li>
+                <li><a href="outlate.html">outlet</a></li>
                 <li><a href="about.html">about</a></li>
-               
+
                 <li><a href="contact.html">contact</a></li>
             </nav>
 
@@ -53,9 +59,9 @@
 
                 <li><a href="index.html" class="active">home</a></li>
                 <li><a href="menu.html">menu</a></li>
-                 <li><a href="outlate.html">outlet</a></li>
+                <li><a href="outlate.html">outlet</a></li>
                 <li><a href="about.html">about</a></li>
-               
+
                 <li><a href="contact.html">contact</a></li>
             </nav>
             <div class="menu-bar"><img loading="lazy" src="./logo-img/Three horizontally a.png" id="three-line" alt="">
@@ -63,6 +69,14 @@
         </section>
     </header>
 
+    <!--
+        HERO SECTION (Main)
+        Description: Primary visual area with brand logo and call-to-action.
+        Elements:
+          - `h1`: brand with logo image
+          - `p`: tagline
+          - `#btn-contact`: Contact button linking to contact page (used for quick nav)
+    -->
     <!--? --------------------------------------------------------------------- hero section main page----------------- -->
 
     <main>
@@ -77,6 +91,11 @@
         </section>
 
 
+        <!--
+            BANNER / Featured Items
+            Description: Shows featured menu items linking to specific menu pages in `manu/`.
+            Each `.banner-card` contains an image and a linked heading.
+        -->
         <!--? --------------------------------------------------------------------- banner section main page----------------- -->
         <section class="low-banner">
             <div class="banner">
@@ -109,6 +128,12 @@
 
 
 
+        <!--
+            SPECIALITY SECTION
+            Purpose: Displays special items. Cards are dynamically injected by `speciality.js` into
+                     the container with id `specialityCardsContainer`.
+            Interaction: Clicking a card opens the `#specialityDetailPage` element.
+        -->
         <!--? --------------------------------------------------------------------- speciality section main page----------------- -->
         <section class="specaility-section">
             <h1 class="menu-grid-title">Our Speciality</h1>
@@ -156,6 +181,13 @@
         <div id="btn-contact-footer"> <a href="contact.html">Contact</a></div>
     </main>
 
+    <!--
+        FOOTER: Contact info, quick links and reviews section
+        Structure:
+          - `#reviews` review slider and Reviews CTA
+          - `.footer-content` contains multiple `footer-section` columns
+          - `.footer-bottom` contains copyright text
+    -->
     <footer class="main-footer">
 
 
@@ -288,7 +320,14 @@
 
 
 
-    <!-- <script src="app.js"></script> -->
+    <!--
+        Scripts loaded in order (do not change order unless you know dependency):
+          - `speciality.js`: populates the speciality grid and handles gallery controls.
+          - `menuToggle.js`: mobile menu open/close behaviour and menu controls.
+          - `script.js`: common UI helpers and event bindings used across pages.
+          - `copyright.js`: updates copyright year or similar footer logic.
+        Note: `app.js` is intentionally commented out and currently unused.
+    -->
     <script src="speciality.js"></script>
     <script src="menuToggle.js"></script>
     <script src="script.js"></script>

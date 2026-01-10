@@ -192,20 +192,24 @@
 
 <body>
 
-  <!--* ------------------- this page heading  -->
+  <!--
+      Contact Page
+      Purpose: Provides phone, email, address, map, directions and social links.
+      Notes: Inline styles are used here for page-specific layout; map iframe is embedded.
+  -->
   <header>
     <section class="header-section">
-<div class="logo-img">
-                <a href="#"><img loading="lazy" src="logo-img/new-logo-1.png" alt="City Hut Pizza House"
-                        title="City Hut Pizza House"></a>
-            </div>
+      <div class="logo-img">
+        <a href="#"><img loading="lazy" src="logo-img/new-logo-1.png" alt="City Hut Pizza House"
+            title="City Hut Pizza House"></a>
+      </div>
       <nav class="nav-baar desktop-nav">
-      <li><a href="index.html" class="active">home</a></li>
-                <li><a href="menu.html">menu</a></li>
-                 <li><a href="outlate.html">outlet</a></li>
-                <li><a href="about.html">about</a></li>
-               
-                <li><a href="contact.html">contact</a></li>
+        <li><a href="index.html" class="active">home</a></li>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="outlate.html">outlet</a></li>
+        <li><a href="about.html">about</a></li>
+
+        <li><a href="contact.html">contact</a></li>
       </nav>
 
 
@@ -221,18 +225,19 @@
           <div class="close-btn">X</div>
         </div>
 
-<li><a href="index.html" class="active">home</a></li>
-                <li><a href="menu.html">menu</a></li>
-                 <li><a href="outlate.html">outlet</a></li>
-                <li><a href="about.html">about</a></li>
-               
-                <li><a href="contact.html">contact</a></li>
+        <li><a href="index.html" class="active">home</a></li>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="outlate.html">outlet</a></li>
+        <li><a href="about.html">about</a></li>
+
+        <li><a href="contact.html">contact</a></li>
 
       </nav>
       <div class="menu-bar"><img loading="lazy" src="./logo-img/Three horizontally a.png" id="three-line" alt=""></div>
     </section>
   </header>
 
+  <!-- MAIN: Contact information and map (contact cards, map, direction CTA) -->
   <main>
 
     <section id="contact" class="contact-section">
@@ -394,7 +399,7 @@
     </div>
   </main>
 
-  <!-- this is  footer -->
+  <!-- FOOTER: Common footer with reach-us, quick links and developer credits (shared across site) -->
   <footer class="main-footer">
 
 
@@ -444,8 +449,15 @@
   </footer>
 
 
+  <!--
+      Scripts loaded for interactions:
+        - `menuToggle.js` handles mobile menu.
+        - `script.js` site-wide common behaviors.
+        - `copyright.js` footer helpers.
+  -->
   <script src="menuToggle.js"></script>
-  <script src="script.js"></script> <script src="copyright.js"></script>
+  <script src="script.js"></script>
+  <script src="copyright.js"></script>
 </body>
 
 </html>

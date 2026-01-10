@@ -8,12 +8,12 @@
     <link rel="icon" href="/logo-img/logo.png" type="image/png">
     <link rel="stylesheet" href="app.css/header-footer.css">
     <link rel="preload" href="app.css/index.css" as="style" onload="this.rel='stylesheet'">
-   
 
-        <link rel="stylesheet" href="app.css/menu.css">
-    
-        <link rel="stylesheet" href="app.css/contect.css">
-   
+
+    <link rel="stylesheet" href="app.css/menu.css">
+
+    <link rel="stylesheet" href="app.css/contect.css">
+
 
 
 </head>
@@ -24,20 +24,24 @@
 
 
 
-    <!--* ------------------- this page heading  -->
+    <!--
+        Menu Page
+        Purpose: Displays the site's menu items in a grid. Cards are injected dynamically by `menu.js`.
+        Notes: Item details (slider, price, type/size options) are handled in the detail section and `pizza.js`.
+    -->
     <header>
         <section class="header-section">
 
-          <div class="logo-img">
+            <div class="logo-img">
                 <a href="#"><img loading="lazy" src="logo-img/new-logo-1.png" alt="City Hut Pizza House"
                         title="City Hut Pizza House"></a>
             </div>
             <nav class="nav-baar desktop-nav">
                 <li><a href="index.html" class="active">home</a></li>
                 <li><a href="menu.html">menu</a></li>
-                 <li><a href="outlate.html">outlet</a></li>
+                <li><a href="outlate.html">outlet</a></li>
                 <li><a href="about.html">about</a></li>
-               
+
                 <li><a href="contact.html">contact</a></li>
             </nav>
             <nav class="nav-baar mobile-menu">
@@ -48,9 +52,9 @@
                 </div>
                 <li><a href="index.html" class="active">home</a></li>
                 <li><a href="menu.html">menu</a></li>
-                 <li><a href="outlate.html">outlet</a></li>
+                <li><a href="outlate.html">outlet</a></li>
                 <li><a href="about.html">about</a></li>
-               
+
                 <li><a href="contact.html">contact</a></li>
             </nav>
             <div class="menu-bar"><img loading="lazy" src="./logo-img/Three horizontally a.png" id="three-line" alt="">
@@ -65,6 +69,7 @@
         </section>
 
 
+        <!-- MENU SECTION: Grid of menu items (cards injected into #cardsContainer by JS) -->
         <section class="menu-section" id="menuPage">
             <div class="menu-grid-titlei-div">
                 <h1 class="menu-grid-title" id="cernter-h1">Our Menu</h1>
@@ -74,7 +79,11 @@
             </div>
         </section>
 
-        <!-- DETAIL PAGE -->
+        <!--
+            DETAIL PAGE: Shows item images, slides and details when a menu card is clicked.
+            - Image slider is populated into `#slides` and controlled by `#prevBtn` / `#nextBtn`.
+            - `#detailPizzaControls` is shown for pizza items and updates price via `updatePizzaPrice()`.
+        -->
         <section id="detailPage" style="display:none;">
             <div class="row" style="justify-content:space-between;">
                 <div class="row">
@@ -267,17 +276,26 @@
     </footer>
 
 
+    <!--
+        Scripts (menu page):
+          - `pizza.js` : pizza-specific logic (type/size/price updates)
+          - `menu.js`  : loads and renders menu cards into `#cardsContainer`
+          - `menuToggle.js` : mobile menu behaviour
+          - `script.js` : common UI utilities
+          - `copyright.js` : footer helpers
+        Note: Inline test script at the bottom is commented out; keep it for reference.
+    -->
     <script src="pizza.js"></script>
     <script src="menu.js"></script>
     <script src="menuToggle.js"></script>
-    <script src="script.js">
-        
-
-    </script> <script src="copyright.js"></script>
-    <!-- <script>
+    <script src="script.js"></script>
+    <script src="copyright.js"></script>
+    <!--
+    <script>
         itemdata = itemdata2;
         renderCards();
-    </script> -->
+    </script>
+    -->
 </body>
 
 </html>

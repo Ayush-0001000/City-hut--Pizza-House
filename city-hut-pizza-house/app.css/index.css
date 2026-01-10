@@ -1,3 +1,8 @@
+/*
+    index.css - Styles for the home page
+    Purpose: Controls layout and visuals for hero, banner, speciality sections and responsive behaviors on the index (home) page.
+    Note: Keep selector names intact because HTML and JS rely on them.
+*/
 * {
     margin: 0;
     padding: 0;

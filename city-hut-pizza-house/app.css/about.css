@@ -1,3 +1,7 @@
+/*
+    about.css - Styles for About page
+    Purpose: Styles for the about page including layout of feature sections, images and text blocks.
+*/
 /* Global Reset and Base Styles */
 * {
     margin: 0;
@@ -14,8 +18,9 @@
     margin: 0 auto;
 }
 
-.btn-contact, .btn-primary {
- display: inline-block;
+.btn-contact,
+.btn-primary {
+    display: inline-block;
 
     box-shadow: 0 4px 10px rgb(255, 11, 11);
     padding: 6px 12px;
@@ -33,7 +38,8 @@
 
 }
 
-.btn-primary:hover, .btn-contact:hover {
+.btn-primary:hover,
+.btn-contact:hover {
     background-color: #e64a19;
 }
 
@@ -64,7 +70,8 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
 }
 
 /* Main page button styling */
@@ -95,7 +102,8 @@
 }
 
 .feature-content {
-    flex: 1; /* Allows text to take up available space */
+    flex: 1;
+    /* Allows text to take up available space */
 }
 
 .feature-title {
@@ -110,7 +118,8 @@
 }
 
 .feature-box {
-    flex-basis: 40%; /* Image box takes 40% of the space */
+    flex-basis: 40%;
+    /* Image box takes 40% of the space */
     max-width: 400px;
     height: 250px;
     background-color: #e0e0e0;
@@ -139,6 +148,7 @@
 
 /* Tablet (768px and down) */
 @media (max-width: 768px) {
+
     /* Stack feature sections vertically */
     .about-feature-section {
         flex-direction: column;
@@ -153,30 +163,34 @@
     }
 
     .feature-content {
-        order: 1; /* Text comes first */
+        order: 1;
+        /* Text comes first */
     }
 
     .feature-box {
-        order: 2; /* Image comes second */
+        order: 2;
+        /* Image comes second */
         flex-basis: auto;
         width: 100%;
         max-width: 100%;
         height: 200px;
     }
-    
+
 
 }
 
 /* Mobile (480px and down) */
 @media (max-width: 480px) {
+
     /* Header: Show menu toggle, hide contact button */
     .btn-contact {
         display: none;
     }
+
     .menu-toggle {
         display: block;
     }
-    
+
     .feature-title {
         font-size: 1.5rem;
     }
@@ -184,5 +198,5 @@
     .feature-box {
         height: 150px;
     }
- 
+
 }
