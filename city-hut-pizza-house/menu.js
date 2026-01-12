@@ -11,7 +11,7 @@
 */
 // Menu Page - Separate JS for menu.html
 const itemdata = {
-    1: { title: "Pizzas", images: ["banner/bg2.png"], link: "manu/pizza.html" },
+    1: { title: "Pizzas", images: ["menu-img/section-2/pery2-fries-pizza.jpg"], link: "manu/pizza.html" },
 
     2: { title: "Burgers & French Fries", images: ["logo-img/menu-burger.png"], link: "manu/burger&french,fries.html" },
 

@@ -12,7 +12,7 @@
 */
 // Speciality Section - Separate JS for index.html
 const specialityData = {
-    1: { title: "Margherita Pizza", desc: "Classic pizza with fresh mozzarella, basil, and tomato sauce.", images: ["banner/bg2.png"], price: "₹100", link: "./manu/pizza.html" },
+    1: { id: 3, title: "Farm House Pizza", desc: "Crisp peppers, mushrooms, olives, and red onions on a herbed tomato base.", description: "Crisp peppers, mushrooms, olives, and red onions on a herbed tomato base.", images: ["./menu-img/section-2/farm-house-pizza.jpg"], price: "₹100", link: "./manu/pizza.html" },
 
 
 
